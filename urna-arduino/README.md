@@ -25,6 +25,14 @@ Quem quiser pode adaptar a ideia para outros projetos, como:
 
 A proposta deste repositório é servir como uma base simples e didática, não como um sistema real de votação.
 
+## Simulação no Tinkercad
+
+O projeto também foi montado e testado no Tinkercad, permitindo visualizar o circuito com Arduino Uno, display LCD I2C, botões e a lógica de funcionamento da urna eletrônica.
+
+Acesse a simulação:
+
+(https://www.tinkercad.com/things/5nWgQybjf8k-trabalhocaualoliveira?sharecode=tgC5lGRLrOdRhF2h12H8YQFURAzwkVfBx0R2rP7LSws)
+
 ## Objetivo
 
 O objetivo deste projeto foi praticar conceitos de programação e sistemas embarcados usando Arduino.
