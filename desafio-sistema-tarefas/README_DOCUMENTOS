@@ -1,0 +1,11 @@
+# Pasta de Documentos
+
+Esta pasta reúne a documentação do projeto Sistema de Gerenciamento de Tarefas em C.
+
+## Arquivos incluídos
+
+- `RELATORIO_IMPLEMENTACOES.md`: relatório com as funcionalidades implementadas.
+- `DESENVOLVIMENTO_INICIAL.md`: explicação sobre a primeira etapa do desenvolvimento.
+- `GUIA_SEPARACAO_INCLUDE_SRC.md`: guia explicando a separação do projeto em `include/` e `src/`.
+- `DOCUMENTACAO_SISTEMA_TAREFAS.md`: documentação completa reunida em Markdown.
+- `DOCUMENTACAO_SISTEMA_TAREFAS.docx`: documentação completa reunida em formato Word.
