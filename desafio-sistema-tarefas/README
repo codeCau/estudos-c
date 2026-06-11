@@ -1,0 +1,209 @@
+# Sistema de Gerenciamento de Tarefas em C
+
+Este projeto foi desenvolvido como parte de um desafio de programação em linguagem C, com o objetivo de criar um sistema de gerenciamento de tarefas funcionando totalmente pelo terminal.
+
+O sistema permite cadastrar, listar, buscar, alterar, remover e organizar tarefas utilizando conceitos fundamentais da linguagem C, como `structs`, vetores, funções, menus, condicionais, laços de repetição e manipulação de strings.
+
+## Objetivo do desafio
+
+O desafio consistia em desenvolver um sistema capaz de organizar tarefas de uma equipe, permitindo o controle de informações como:
+
+- ID da tarefa
+- Título
+- Descrição
+- Prioridade
+- Status
+
+Além disso, o sistema deveria utilizar obrigatoriamente:
+
+- `struct`
+- vetor de structs
+- funções
+- menu com `switch`
+- `fgets` para leitura de textos
+- `strcmp` para comparações
+- laços de repetição
+- validações básicas
+- manipulação correta de strings
+
+## Funcionalidades principais
+
+O sistema possui as seguintes funcionalidades:
+
+1. Cadastrar tarefa
+2. Listar todas as tarefas
+3. Buscar tarefa pelo título
+4. Alterar status da tarefa
+5. Mostrar tarefas pendentes
+6. Mostrar tarefas concluídas
+7. Mostrar tarefa com maior prioridade
+8. Remover tarefa pelo ID
+9. Encerrar o sistema
+
+## Estrutura da tarefa
+
+Cada tarefa possui os seguintes campos:
+
+```c
+typedef struct {
+    int id;
+    char titulo[50];
+    char descricao[75];
+    int prioridade;
+    int status;
+    int dificuldade;
+    int idPessoaVinculada;
+} tarefa;
+```
+
+## Regras implementadas
+
+### ID
+
+Cada tarefa recebe um ID único gerado automaticamente pelo sistema.
+
+### Prioridade
+
+A prioridade da tarefa segue a seguinte regra:
+
+| Valor | Prioridade |
+|------:|------------|
+| 1 | Baixa |
+| 2 | Média |
+| 3 | Alta |
+
+### Status
+
+O status da tarefa segue a seguinte regra:
+
+| Valor | Status |
+|------:|--------|
+| 0 | Pendente |
+| 1 | Concluída |
+
+## Implementações extras
+
+Após concluir os requisitos principais do desafio, foram adicionadas novas funcionalidades para deixar o sistema mais completo.
+
+### Cadastro de pessoas
+
+Foi criada uma nova estrutura para representar pessoas cadastradas no sistema.
+
+Cada pessoa possui:
+
+- ID
+- Nome
+- Email
+- Nível
+
+Os níveis disponíveis são:
+
+- Júnior
+- Pleno
+- Sênior
+
+### Validação de email
+
+Foi adicionada uma função para validar o email informado no cadastro da pessoa.
+
+O email precisa conter:
+
+- `@`
+- `.com` ou `.br`
+
+Caso o email não siga esse formato básico, o cadastro não é concluído.
+
+### Dificuldade da tarefa
+
+Além da prioridade, cada tarefa também passou a possuir uma dificuldade.
+
+As dificuldades seguem a regra:
+
+| Valor | Dificuldade |
+|------:|-------------|
+| 1 | Baixa |
+| 2 | Média |
+| 3 | Alta |
+
+### Vínculo entre pessoa e tarefa
+
+Também foi implementada uma funcionalidade para vincular uma pessoa a uma tarefa.
+
+O vínculo respeita o nível da pessoa e a dificuldade da tarefa:
+
+| Nível | Dificuldades permitidas |
+|------|--------------------------|
+| Júnior | Baixa |
+| Pleno | Baixa e Média |
+| Sênior | Baixa, Média e Alta |
+
+Se uma pessoa tentar assumir uma tarefa acima do seu nível permitido, o sistema bloqueia o vínculo e exibe uma mensagem explicando o motivo.
+
+## Melhorias de legibilidade
+
+Depois das funcionalidades principais, também foram feitas melhorias na organização do código:
+
+- Comentários longos foram simplificados
+- Variáveis abreviadas foram renomeadas
+- Nomes como `o`, `trf`, `pss` e `tTotais` foram substituídos por nomes mais claros
+- O código ficou mais fácil de ler, estudar e manter
+
+Exemplos de melhorias:
+
+| Antes | Depois |
+|------|--------|
+| `o` | `opcao` |
+| `trf` | `tarefas` |
+| `pss` | `pessoas` |
+| `tTotais` | `totalTarefas` |
+| `pTotais` | `totalPessoas` |
+| `idBq` | `proximoIdTarefa` |
+| `idPBq` | `proximoIdPessoa` |
+
+## Tempo de desenvolvimento
+
+O desafio principal foi concluído em aproximadamente 5 horas e 30 minutos.
+
+Durante o desenvolvimento, além de cumprir os requisitos obrigatórios, também consegui avançar em melhorias extras no sistema, reforçando a prática com `structs`, funções, validações e organização de código.
+
+## Conceitos praticados
+
+Durante o desenvolvimento deste projeto, foram praticados os seguintes conceitos:
+
+- Criação e uso de `structs`
+- Vetores de structs
+- Funções separadas por responsabilidade
+- Menu interativo com `switch`
+- Validação de entradas
+- Manipulação de strings com `fgets`, `strcmp`, `strchr` e `strstr`
+- Busca por ID
+- Busca por título
+- Remoção de elementos em vetor
+- Organização e refatoração de código
+- Regras de negócio simples
+
+## Como executar
+
+Para compilar o programa com GCC:
+
+```bash
+gcc main.c -o sistema
+```
+
+Para executar:
+
+```bash
+./sistema
+```
+
+No Windows, o comando de execução pode ser:
+
+```bash
+sistema.exe
+```
+
+## Observação
+
+Este projeto representa uma evolução prática no estudo da linguagem C, aplicando conceitos fundamentais em um sistema funcional de terminal.
+
+Além de atender ao desafio proposto, o sistema recebeu funcionalidades extras relacionadas ao gerenciamento de pessoas, níveis de responsabilidade e dificuldade das tarefas.
