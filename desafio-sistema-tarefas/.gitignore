@@ -1,0 +1,39 @@
+# Arquivos gerados pela compilação em C/C++
+*.exe
+*.out
+*.o
+*.obj
+*.a
+*.so
+*.dll
+*.dylib
+
+# Pastas de build/compilação
+build/
+dist/
+bin/
+obj/
+
+# Arquivos temporário
+*.tmp
+*.log
+*.bak
+*.swp
+*~
+
+# VS Code
+.vscode/
+
+# Code::Blocks / Dev-C++ / outros IDEs
+*.cbp
+*.depend
+*.layout
+*.workspace
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos de teste/entrada gerados localmente
+entrada.txt
+saida.txt
